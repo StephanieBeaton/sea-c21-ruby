@@ -1,0 +1,60 @@
+=> Shell
+/usr/bin/fish
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/art/.rvm/bin
+
+=> Sublime Text
+Sublime Text Build 3065
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by file type specific settings.
+{
+	"ensure_newline_at_eof_on_save": true,
+  "rulers": [80],
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "trim_trailing_white_space_on_save": true,
+  "update_check": false
+}
+
+=> Ruby
+ruby 2.1.3p242 (2014-09-19 revision 47630) [i686-linux]
+IRB.conf[:PROMPT_MODE] = :SIMPLE
+IRB.conf[:AUTO_INDENT] = true
+
+=> Git
+git version 2.1.1
+alias.br=branch
+alias.ca=commit --amend --reuse-message=HEAD
+alias.c=commit -m
+alias.ci=commit --verbose
+alias.co=checkout
+alias.df=diff HEAD
+alias.dfs=diff --staged
+alias.la=log --patch --stat --pretty=format:"%C(bold red)%h %Cgreen%cr %Cblue%cn%C(yellow)%d %Creset%s"
+alias.ll=log --pretty=format:"%Cred%h %>(11,trunc)%Cgreen%cr %<(10,trunc)%Cblue%cn%C(yellow)%d %Creset%s"
+alias.rmb=!sh -c "git branch -D $1 && git push origin :$1" -
+alias.st=status --short --branch
+branch.master.merge=refs/heads/master
+branch.master.remote=origin
+color.branch.current=yellow reverse
+color.branch.local=yellow
+color.branch.remote=green
+color.branch.upstream=cyan
+color.diff.frag=magenta bold
+color.diff.func=normal bold
+color.diff.meta=yellow bold
+color.diff.new=green bold
+color.diff.old=red bold
+color.status.added=green bold
+color.status.branch=yellow
+color.status.changed=yellow bold
+color.status.untracked=cyan bold
+core.bare=false
+core.filemode=true
+core.logallrefupdates=true
+core.repositoryformatversion=0
+credential.helper=cache --timeout=3600
+push.default=simple
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+remote.origin.url=git@github.com:StephanieBeaton/sea-c21-ruby.git
+user.email=stefanybeaton@gmail.com
+user.name=StephanieBeaton
