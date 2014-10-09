@@ -29,3 +29,43 @@
 #     Returns a new String of length Integer with `string` right justified.
 #
 #     'bird'.rjust(10)  #=> '      bird'
+
+line_width = 54
+toc_title = 'Table of Contents'
+
+puts toc_title.center(line_width)
+
+chptr_nbr = 1
+chptr_title = 'Getting Started'
+chptr_page = 1
+
+left_side_of_line  = 'Chapter ' + chptr_nbr.to_s + ':  ' + chptr_title
+right_side_of_line = 'page  ' + chptr_page.to_s
+
+# puts 'left_side_of_line.length = ' + left_side_of_line.length.to_s
+# puts 'right_side_of_line.length = ' + right_side_of_line.length.to_s
+# puts 'left_side_of_line = "' + left_side_of_line + '"'
+# puts 'right_side_of_line = "' + right_side_of_line + '"'
+
+puts left_side_of_line.ljust(line_width / 2) +
+    right_side_of_line.rjust(line_width / 2)
+
+chptr_nbr = 2
+chptr_title = 'Numbers'
+chptr_page = 9
+
+left_side_of_line  = 'Chapter ' + chptr_nbr.to_s + ':  ' + chptr_title
+right_side_of_line = 'page  ' + chptr_page.to_s
+
+puts left_side_of_line.ljust(line_width / 2) +
+    right_side_of_line.rjust(line_width / 2)
+
+chptr_nbr = 3
+chptr_title = 'Letters'
+chptr_page = 13
+
+left_side_of_line  = 'Chapter ' + chptr_nbr.to_s + ':  ' + chptr_title
+right_side_of_line = 'page ' + chptr_page.to_s
+
+puts left_side_of_line.ljust(line_width / 2) +
+    right_side_of_line.rjust(line_width / 2)
