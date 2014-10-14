@@ -16,3 +16,27 @@
 #   Go to the store and buy some more, 3 bottles of beer on the wall!
 #
 # TIP: I expect you to use a loop.
+
+n = 3
+word = 'bottles'
+
+loop do
+  puts "#{n} #{word} of beer on the wall, #{n} #{word} of beer!"
+
+  n -= 1
+  n = 'no more' if n == 0
+
+  if n == 1
+    word = 'bottle'
+  else
+    word = 'bottles'
+  end
+
+  puts "Take one down, pass it around, #{n} #{word} of beer on the wall!"
+
+  break if n == 'no more'
+
+end
+
+puts 'No more bottles of beer on the wall, no more bottles of beer!'
+puts 'Go to the store and buy some more, 3 bottles of beer on the wall!'
