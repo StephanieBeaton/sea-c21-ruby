@@ -8,3 +8,19 @@
 # divisible by 400 (e.g. 2000).
 #
 # Tip: I expect you to use a loop and a few modulo operations.
+
+# puts 'Enter beginning year:'
+# beginning_year = gets.chomp.to_i
+# puts 'Enter end year:'
+# ending_year = gets.chomp.to_i
+
+year = 1900
+while year <= 2000
+  if (year % 4 == 0) && (year % 100 > 0)
+    puts "#{year}"
+  elsif (year % 4 == 0) && (year % 400 == 0)
+    puts "#{year}"
+  end
+
+  year += 1
+end
