@@ -33,7 +33,59 @@
 
 # rubocop:disable MethodLength
 def modern_roman_numeral(num)
-  num # change me
+  roman_letter_values = [['M', 1000],
+                         ['CM', 900],
+                         ['D', 500],
+                         ['CD', 400],
+                         ['C', 100],
+                         ['XC', 90],
+                         ['L', 50],
+                         ['XL', 40],
+                         ['X', 10],
+                         ['IX', 9],
+                         ['V', 5],
+                         ['IV', 4],
+                         ['I', 1]]
+
+  remainder = num
+
+  roman_numeral = ''
+
+  roman_letter_values.each do | roman_letter, value|
+    # puts "roman_letter = #{roman_letter}  value = #{value}"
+
+    if (roman_letter.length == 2)
+
+      if (remainder / value == 1)
+
+        roman_numeral += roman_letter
+
+        # puts "roman_numeral = #{roman_numeral}"
+
+        remainder = remainder % value
+
+        # puts "remainder = #{remainder}"
+
+      end
+
+    else
+
+      quotient = remainder / value
+
+      # puts "quotient = #{quotient}"
+
+      roman_numeral += roman_letter * quotient
+
+      # puts "roman_numeral = #{roman_numeral}"
+
+      remainder = remainder % value
+
+      # puts "remainder = #{remainder}"
+    end
+
+  end
+
+  roman_numeral
 end
 
 input = ARGV[0].to_i

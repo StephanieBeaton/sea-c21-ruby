@@ -28,7 +28,6 @@
 
 # rubocop:disable MethodLength
 def old_school_roman_numeral(num)
-
   roman_letter_values = [['M', 1000],
                          ['D', 500],
                          ['C', 100],
@@ -48,7 +47,7 @@ def old_school_roman_numeral(num)
 
     # puts "quotient = #{quotient}"
 
-    roman_numeral = roman_numeral + roman_letter * quotient
+    roman_numeral += roman_letter * quotient
 
     # puts "roman_numeral = #{roman_numeral}"
 
@@ -57,8 +56,7 @@ def old_school_roman_numeral(num)
     # puts "remainder = #{remainder}"
   end
 
-  return roman_numeral
-
+  roman_numeral
 end
 
 input = ARGV[0].to_i
@@ -66,4 +64,3 @@ input = ARGV[0].to_i
 abort 'Usage: exercise4.rb [1-1000]' unless input.between?(1, 1000)
 
 puts old_school_roman_numeral(input)
-
