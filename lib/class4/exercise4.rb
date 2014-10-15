@@ -36,7 +36,36 @@
 #   VIIII
 
 def old_school_roman_numeral(num)
-  num # replace me
+
+  roman_letter_values = [['M', 1000],
+                         ['D', 500],
+                         ['C', 100],
+                         ['L', 50],
+                         ['X', 10],
+                         ['V', 5],
+                         ['I', 1]]
+
+  remainder = num
+
+  roman_numeral = ''
+
+  roman_letter_values.each do | roman_letter, value|
+    # puts "roman_letter = #{roman_letter}  value = #{value}"
+
+    quotient = remainder / value
+
+    # puts "quotient = #{quotient}"
+
+    roman_numeral = roman_numeral + roman_letter * quotient
+
+    # puts "roman_numeral = #{roman_numeral}"
+
+    remainder = remainder % value
+
+    # puts "remainder = #{remainder}"
+  end
+
+  return roman_numeral
 end
 
 input = ARGV[0].to_i
@@ -46,3 +75,4 @@ unless input.between?(1, 3000)
 end
 
 puts old_school_roman_numeral(input)
+
