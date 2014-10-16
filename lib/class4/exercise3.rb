@@ -36,15 +36,12 @@ def ask(question)
   loop do
     puts question
     reply = gets.chomp.downcase
-    if reply == 'y' || reply == 'n'
-      if reply == 'y'
-        return 'We can be friends!'
-      else
-        return 'Get out of my sight!'
-      end
-    else
-      puts 'Try again'
+    if reply == 'y'
+      return 'We can be friends!'
+    elsif reply == 'n'
+      return 'Get out of my sight!'
     end
+    puts 'Try again'
   end
 end
 
