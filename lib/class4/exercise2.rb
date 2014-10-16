@@ -19,15 +19,15 @@
 # TIP #3: The width of each line is 50 characters.
 
 hip_hop_hits = [['Can I Kick It?', 'A Tribe Called Quest', '1991'],
-                ['Rump Shaker', 'Wreckx-n-Effect', '1992'],
-                ['Check Yo Self', 'Ice Cube', '1993'],
-                ['Regulate', 'Warren G & Nate Dogg', '1994'],
-                ['I Got 5 On It', 'Luniz', '1995'],
-                ['Ready Or Not', 'The Fugees', '1996']]
+                ['Rump Shaker',    'Wreckx-n-Effect',      '1992'],
+                ['Check Yo Self',  'Ice Cube',             '1993'],
+                ['Regulate',       'Warren G & Nate Dogg', '1994'],
+                ['I Got 5 On It',  'Luniz',                '1995'],
+                ['Ready Or Not',   'The Fugees',           '1996']]
 
-line_width = 50
+# line_width = 50
 
 hip_hop_hits.each do |song, artist, year|
 
-  puts "#{song.ljust(19)} #{artist.ljust(25)} #{year.ljust(5)}"
+  puts song.ljust(20) + artist.ljust(26) + year.ljust(4)
 end
