@@ -28,15 +28,22 @@
 require 'yaml'
 
 def records
-  ['replace me']
+  ['Incentivized methodologies',
+   'Seemless innovation',
+   'Corporate synergy',
+   'Scalable globalization',
+   'Monetized assets']
 end
 
 def database
-  '/replace/me'
+  # Assumption: program is run in the directory 'sea-c21-ruby'
+  File.absolute_path('lib/class5/database.yml')
 end
 
 def save
-  false # fix me
+  File.open database, 'w' do |f|
+    f.write records.to_yaml
+  end
 end
 
 save

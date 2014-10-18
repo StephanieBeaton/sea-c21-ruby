@@ -22,11 +22,12 @@
 require 'yaml'
 
 def database
-  '/replace/me'
+  # Assumption: program is run in this directory 'sea-c21-ruby'
+  File.absolute_path('lib/class5/database.yml')
 end
 
 def load
-  ['fix me']
+  YAML.load File.read database
 end
 
 records = load
