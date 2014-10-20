@@ -54,34 +54,17 @@ def modern_roman_numeral(num)
   roman_letter_values.each do | roman_letter, value|
     # puts "roman_letter = #{roman_letter}  value = #{value}"
 
-    if (roman_letter.length == 2)
+    quotient = remainder / value
 
-      if (remainder / value == 1)
+    # puts "quotient = #{quotient}"
 
-        roman_numeral += roman_letter
+    roman_numeral += roman_letter * quotient
 
-        # puts "roman_numeral = #{roman_numeral}"
+    # puts "roman_numeral = #{roman_numeral}"
 
-        remainder = remainder % value
+    remainder = remainder % value
 
-        # puts "remainder = #{remainder}"
-
-      end
-
-    else
-
-      quotient = remainder / value
-
-      # puts "quotient = #{quotient}"
-
-      roman_numeral += roman_letter * quotient
-
-      # puts "roman_numeral = #{roman_numeral}"
-
-      remainder = remainder % value
-
-      # puts "remainder = #{remainder}"
-    end
+    # puts "remainder = #{remainder}"
 
   end
 
