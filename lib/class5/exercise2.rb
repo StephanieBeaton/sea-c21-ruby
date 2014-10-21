@@ -70,8 +70,7 @@
 #       '/Users/tim/sea-c21-ruby/lib/class5/'
 
 def database
-  # Assumption: program is run in this directory 'sea-c21-ruby'
-  File.absolute_path('lib/class5/database.yml')
+  File.dirname(File.absolute_path(__FILE__)) + '/database.yml'
 end
 
 puts database

@@ -36,8 +36,7 @@ def records
 end
 
 def database
-  # Assumption: program is run in the directory 'sea-c21-ruby'
-  File.absolute_path('lib/class5/database.yml')
+  File.dirname(File.absolute_path(__FILE__)) + '/database.yml'
 end
 
 def save
