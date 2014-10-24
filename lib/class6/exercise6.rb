@@ -33,7 +33,6 @@ def save(locl_person)
   File.write(database, locl_person.to_yaml)
 end
 
-
 # This update method updates a key, value pair
 # ...or it inserts a new key, value pair
 # .. without using "merge"
