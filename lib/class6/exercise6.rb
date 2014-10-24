@@ -33,12 +33,27 @@ def save(locl_person)
   File.write(database, locl_person.to_yaml)
 end
 
+
+# This update method updates a key, value pair
+# ...or it inserts a new key, value pair
+# .. without using "merge"
+
+# def update(key, value)
+#  person = load
+#  # puts person
+#  person[key.to_sym] = (value.to_i != 0) ? value.to_i : value
+#  # puts
+#  # puts person
+#  save person
+# end
+
+# This update method updates a key, value pair
+# ...or it inserts a new key, value pair
+# .. by using "merge"
+
 def update(key, value)
   person = load
-  # puts person
-  person[key.to_sym] = value
-  # puts
-  # puts person
+  person = person.merge(key.to_sym => (value.to_i != 0) ? value.to_i : value)
   save person
 end
 
