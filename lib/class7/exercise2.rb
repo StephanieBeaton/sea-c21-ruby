@@ -16,5 +16,17 @@
 #     orange_tree.fruit  #=> 50
 
 class OrangeTree
-  # fix me
+  def initialize
+    puts 'inside initialize and setting @fruit to 50.'
+    # Sets it's @fruit instance variable to 50.
+    @fruit = 50
+  end
+
+  def fruit
+    # Returns the value of the @fruit instance variable
+    @fruit
+  end
 end
+
+orange_tree = OrangeTree.new
+puts "the number of oranges on the tree is = #{orange_tree.fruit}"

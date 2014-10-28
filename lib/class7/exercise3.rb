@@ -23,5 +23,37 @@
 #     orange_tree.fruit      #=> 44
 
 class OrangeTree
-  # replace me
+  def initialize
+    puts 'inside initialize and setting @fruit to 50.'
+    # Sets it's @fruit instance variable to 50.
+    @fruit = 50
+  end
+
+  def fruit
+    # Returns the value of the @fruit instance variable
+    @fruit
+  end
+
+  def pick!(amount = 1)
+    # Returns nil if @fruit is less than the `amount` to pick.
+    # Otherwise, subtracts the `amount` from @fruit and returns it's new value.
+    # The default `amount` is 1.
+    if @fruit < amount
+      return nil
+    else
+      @fruit -= amount
+    end
+  end
 end
+
+orange_tree = OrangeTree.new
+puts "orange_tree.fruit = #{orange_tree.fruit}"      # => 50
+
+puts "orange_tree.pick! returns #{orange_tree.pick!}"      # => 49
+puts "orange_tree.fruit = #{orange_tree.fruit}"      # => 49
+
+puts "orange_tree.pick!(5) returns #{orange_tree.pick!(5)}"   # => 44
+puts "orange_tree.fruit = #{orange_tree.fruit}"      # => 44
+
+puts "orange_tree.pick!(50) returns #{orange_tree.pick!(50)}"  # => nil
+puts "orange_tree.fruit = #{orange_tree.fruit}"      # => 44
