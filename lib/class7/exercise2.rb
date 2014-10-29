@@ -15,6 +15,7 @@
 #     orange_tree = OrangeTree.new
 #     orange_tree.fruit  #=> 50
 
+# rubocop:disable TrivialAccessors
 class OrangeTree
   def initialize
     puts 'inside initialize and setting @fruit to 50.'
