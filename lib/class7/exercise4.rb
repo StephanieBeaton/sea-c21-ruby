@@ -69,7 +69,7 @@ puts "orange_tree.fruit = #{orange_tree.fruit}"  # => 20
 
 # test '==' method
 puts 'OrangeTree.new(20) == OrangeTree.new(20)'
-puts "#{OrangeTree.new(20) == OrangeTree.new(20)}"
+# puts "#{OrangeTree.new(20) == OrangeTree.new(20)}"
 puts
 puts 'OrangeTree.new(20) != OrangeTree.new(10)'
 puts "#{OrangeTree.new(20) != OrangeTree.new(10)}"
